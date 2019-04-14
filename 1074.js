@@ -3,24 +3,24 @@ var lines = input.split('\r\n');
 
 
 var N = parseInt( lines[0]);
-var i = parseInt( lines[1]);
-var X = i++;
+var X = parseInt( lines[1]);
 
-for (i > 1; i++;){ 
+for (var i = 1 ; i <= N; i++){ 
+    
+    var X = parseInt( lines[i]);
 
-
-        if (X%2 == 0 && X>0){
+        if (X % 2 === 0 && X > 0){
             console.log ("EVEN POSITIVE");
         }
-        else if(X%2 == 0 && X<0){
+        else if(X % 2 === 0 && X < 0){
             console.log ("EVEN NEGATIVE");
         }
-        else if(X%2 != 0 && X>0){
+        else if(X % 2 !== 0 && X > 0){
             console.log ("ODD POSITIVE");
         }
-        else if(X%2 != 0 && X<0){
+        else if(X % 2 !== 0 && X < 0){
             console.log ("ODD NEGATIVE");
         }
-        else if(X == 0)
+        else if (X === 0)
             console.log ("NULL");
 }
